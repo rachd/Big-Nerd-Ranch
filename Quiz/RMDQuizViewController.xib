@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RMDQuizViewController">
             <connections>
+                <outlet property="answerLabel" destination="vxN-W4-8H5" id="tNj-ic-6Kc"/>
+                <outlet property="questionLabel" destination="Shh-p1-C78" id="BSf-wR-wuL"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -31,11 +33,17 @@
                     <rect key="frame" x="26" y="137" width="547" height="30"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Show Question"/>
+                    <connections>
+                        <action selector="showQuestion:" destination="-1" eventType="touchUpInside" id="HTu-o8-z8D"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-ML-ZcL">
                     <rect key="frame" x="26" y="369" width="547" height="30"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Show Answer"/>
+                    <connections>
+                        <action selector="showAnswer:" destination="-1" eventType="touchUpInside" id="UHA-2o-aHB"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

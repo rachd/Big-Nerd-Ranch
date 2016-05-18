@@ -13,11 +13,16 @@
     NSString *_serialNumber;
     int _valueInDollars;
     NSDate *_dateCreated;
+    
+    RMDItem *_containedItem;
+    __weak RMDItem *_container;
 }
 
 + (instancetype)randomItem;
 
 - (instancetype)initWithItemName:(NSString *)name valueInDollars:(int)value serialNumber:(NSString *)sNumber;
+
+- (instancetype)initWithItemName:(NSString *)name serialNumber:(NSString *) sNumber;
 
 - (instancetype)initWithItemName:(NSString *)name;
 
@@ -31,5 +36,11 @@
 - (int)valueInDollars;
 
 - (NSDate *)dateCreated;
+
+- (void)setContainedItem:(RMDItem *)item;
+- (RMDItem *)containedItem;
+
+- (void)setContainer:(RMDItem *)item;
+- (RMDItem *)container;
 
 @end

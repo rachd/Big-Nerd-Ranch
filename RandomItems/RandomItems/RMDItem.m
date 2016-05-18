@@ -44,6 +44,10 @@
     return self;
 }
 
+- (instancetype)initWithItemName:(NSString *)name serialNumber:(NSString *)sNumber {
+    return [self initWithItemName:name valueInDollars:0 serialNumber:sNumber];
+}
+
 - (instancetype)initWithItemName:(NSString *)name {
     return [self initWithItemName:name valueInDollars:0 serialNumber:@""];
 }
@@ -80,9 +84,30 @@
     return _dateCreated;
 }
 
+- (void)setContainedItem:(RMDItem *)item {
+    _containedItem = item;
+    item.container = self;
+}
+
+- (RMDItem *)containedItem {
+    return _containedItem;
+}
+
+- (void)setContainer:(RMDItem *)item {
+    _container = item;
+}
+
+- (RMDItem *)container {
+    return _container;
+}
+
 - (NSString *)description {
     NSString *descriptionString = [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@", self.itemName, self.serialNumber, self.valueInDollars, self.dateCreated];
     return descriptionString;
+}
+
+- (void)dealloc {
+    NSLog(@"Destroyed: %@", self);
 }
 
 @end

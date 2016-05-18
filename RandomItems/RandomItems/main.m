@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RMDItem.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -21,6 +22,12 @@ int main(int argc, const char * argv[]) {
         for (NSString *item in items) {
             NSLog(@"%@", item);
         }
+        
+        RMDItem *item = [[RMDItem alloc] init];
+        item.itemName = @"Red Sofa";
+        item.serialNumber = @"A1B2C";
+        item.valueInDollars = 100;
+        NSLog(@"%@", item);
         
         items = nil;
     }

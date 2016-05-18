@@ -23,11 +23,14 @@ int main(int argc, const char * argv[]) {
             NSLog(@"%@", item);
         }
         
-        RMDItem *item = [[RMDItem alloc] init];
-        item.itemName = @"Red Sofa";
-        item.serialNumber = @"A1B2C";
-        item.valueInDollars = 100;
+        RMDItem *item = [[RMDItem alloc] initWithItemName:@"Red Sofa" valueInDollars:100 serialNumber:@"A1B2C"];
         NSLog(@"%@", item);
+        
+        RMDItem *itemWithName = [[RMDItem alloc] initWithItemName:@"Blue Sofa"];
+        NSLog(@"%@", itemWithName);
+        
+        RMDItem *itemWithNoName = [[RMDItem alloc] init];
+        NSLog(@"%@", itemWithNoName);
         
         items = nil;
     }

@@ -8,16 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "RMDItem.h"
+#import "RMDContainer.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-//        for (int i = 0; i < 10; i++) {
-//            RMDItem *randomItem = [RMDItem randomItem];
-//            [items addObject:randomItem];
-//            NSLog(@"%@", randomItem);
-//        }
+        for (int i = 0; i < 3; i++) {
+            RMDItem *randomItem = [RMDItem randomItem];
+            [items addObject:randomItem];
+            //NSLog(@"%@", randomItem);
+        }
         
         RMDItem *backpack = [[RMDItem alloc] initWithItemName:@"Backpack"];
         [items addObject:backpack];
@@ -27,15 +28,14 @@ int main(int argc, const char * argv[]) {
         
         backpack.containedItem = calculator;
         
-        backpack = nil;
-        calculator = nil;
+        RMDContainer *container = [[RMDContainer alloc] initWithItems:items name:@"Container" valueInDollars:50];
         
-        for (RMDItem *item in items) {
-            NSLog(@"%@", item);
-        }
+        RMDContainer *biggerContainer = [[RMDContainer alloc] initWithItems:@[backpack, container] name:@"Big" valueInDollars:10];
         
-        NSLog(@"Setting items to nil...");
-        items = nil;
+        NSLog(@"%@", biggerContainer);
+        
+//        NSLog(@"Setting items to nil...");
+//        items = nil;
     }
     return 0;
 }

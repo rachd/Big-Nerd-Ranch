@@ -10,4 +10,8 @@
 
 @interface RMDContainer : RMDItem
 
+@property NSArray* items;
+
+- (instancetype)initWithItems:(NSArray *)items name:(NSString *)name valueInDollars:(int)value;
+
 @end

@@ -18,14 +18,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
+    CGRect firstFrame = self.view.bounds;
     RMDHypnosisView *firstView = [[RMDHypnosisView alloc] initWithFrame:firstFrame];
-    firstView.backgroundColor = [UIColor redColor];
     [self.view addSubview:firstView];
     
-    RMDHypnosisView *secondView = [[RMDHypnosisView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
-    secondView.backgroundColor = [UIColor blueColor];
-    [firstView addSubview:secondView];
+//    RMDHypnosisView *secondView = [[RMDHypnosisView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
+//    secondView.backgroundColor = [UIColor blueColor];
+//    [firstView addSubview:secondView];
     
 }
 

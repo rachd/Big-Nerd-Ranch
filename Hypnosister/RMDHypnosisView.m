@@ -44,6 +44,10 @@
     path.lineWidth = 10;
     [[UIColor lightGrayColor] setStroke];
     [path stroke];
+    
+    CGRect logoBounds = CGRectMake(self.frame.size.width / 4, self.frame.size.height / 4, self.frame.size.width / 2, self.frame.size.height / 2);
+    UIImage *logoImage = [UIImage imageNamed:@"logo"];
+    [logoImage drawInRect:logoBounds];
 }
 
 @end

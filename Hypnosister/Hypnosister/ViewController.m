@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RMDHypnosisView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
+    RMDHypnosisView *firstView = [[RMDHypnosisView alloc] initWithFrame:firstFrame];
+    firstView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:firstView];
+    
+    RMDHypnosisView *secondView = [[RMDHypnosisView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
+    secondView.backgroundColor = [UIColor blueColor];
+    [firstView addSubview:secondView];
+    
 }
 
 - (void)didReceiveMemoryWarning {

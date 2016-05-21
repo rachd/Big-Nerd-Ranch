@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "RMDHypnosisView.h"
 #import "ViewController.h"
 
 @interface AppDelegate ()
@@ -19,12 +18,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    CGRect firstFrame = CGRectMake(160, 240, 100, 150);
-    
-    RMDHypnosisView *firstView = [[RMDHypnosisView alloc] initWithFrame:firstFrame];
-    firstView.backgroundColor = [UIColor redColor];
-    
-    [self.window addSubview:firstView];
     
     ViewController *vc = [[ViewController alloc] init];
     

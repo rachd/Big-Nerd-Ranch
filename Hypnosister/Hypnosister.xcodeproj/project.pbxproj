@@ -15,6 +15,7 @@
 		CCBF67CE1CEFFC7700FCE483 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBF67CC1CEFFC7700FCE483 /* LaunchScreen.storyboard */; };
 		CCBF67D91CEFFC7700FCE483 /* HypnosisterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF67D81CEFFC7700FCE483 /* HypnosisterTests.m */; };
 		CCBF67E41CEFFC7700FCE483 /* HypnosisterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF67E31CEFFC7700FCE483 /* HypnosisterUITests.m */; };
+		CCBF67F31CF0024400FCE483 /* RMDHypnosisView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBF67F21CF0024400FCE483 /* RMDHypnosisView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		CCBF67DF1CEFFC7700FCE483 /* HypnosisterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HypnosisterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBF67E31CEFFC7700FCE483 /* HypnosisterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HypnosisterUITests.m; sourceTree = "<group>"; };
 		CCBF67E51CEFFC7700FCE483 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCBF67F11CF0024400FCE483 /* RMDHypnosisView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDHypnosisView.h; path = ../RMDHypnosisView.h; sourceTree = "<group>"; };
+		CCBF67F21CF0024400FCE483 /* RMDHypnosisView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDHypnosisView.m; path = ../RMDHypnosisView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				CCBF67C11CEFFC7700FCE483 /* AppDelegate.h */,
 				CCBF67C21CEFFC7700FCE483 /* AppDelegate.m */,
+				CCBF67F11CF0024400FCE483 /* RMDHypnosisView.h */,
+				CCBF67F21CF0024400FCE483 /* RMDHypnosisView.m */,
 				CCBF67C41CEFFC7700FCE483 /* ViewController.h */,
 				CCBF67C51CEFFC7700FCE483 /* ViewController.m */,
 				CCBF67C71CEFFC7700FCE483 /* Main.storyboard */,
@@ -273,6 +278,7 @@
 				CCBF67C61CEFFC7700FCE483 /* ViewController.m in Sources */,
 				CCBF67C31CEFFC7700FCE483 /* AppDelegate.m in Sources */,
 				CCBF67C01CEFFC7700FCE483 /* main.m in Sources */,
+				CCBF67F31CF0024400FCE483 /* RMDHypnosisView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +502,7 @@
 				CCBF67EA1CEFFC7700FCE483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCBF67EB1CEFFC7700FCE483 /* Build configuration list for PBXNativeTarget "HypnosisterTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +511,7 @@
 				CCBF67ED1CEFFC7700FCE483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCBF67EE1CEFFC7700FCE483 /* Build configuration list for PBXNativeTarget "HypnosisterUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +520,7 @@
 				CCBF67F01CEFFC7700FCE483 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

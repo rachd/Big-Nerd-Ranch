@@ -45,9 +45,15 @@
     [[UIColor lightGrayColor] setStroke];
     [path stroke];
     
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(currentContext);
+    CGContextSetShadow(currentContext, CGSizeMake(4, 7), 3);
+    
     CGRect logoBounds = CGRectMake(self.frame.size.width / 4, self.frame.size.height / 4, self.frame.size.width / 2, self.frame.size.height / 2);
     UIImage *logoImage = [UIImage imageNamed:@"logo"];
     [logoImage drawInRect:logoBounds];
+    
+    CGContextRestoreGState(currentContext);
 }
 
 @end

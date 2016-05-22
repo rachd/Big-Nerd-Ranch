@@ -8,12 +8,19 @@
 
 #import "RMDHypnosisView.h"
 
+@interface RMDHypnosisView ()
+
+@property (strong, nonatomic) UIColor *circleColor;
+
+@end
+
 @implementation RMDHypnosisView
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        self.circleColor = [UIColor lightGrayColor];
     }
     return self;
 }
@@ -42,7 +49,7 @@
                      clockwise:YES];
     }
     path.lineWidth = 10;
-    [[UIColor lightGrayColor] setStroke];
+    [self.circleColor setStroke];
     [path stroke];
     
     //set triangle clipping path
@@ -85,6 +92,20 @@
     
     CGContextRestoreGState(currentContext);
 
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    float red = (arc4random() % 100) / 100.0;
+    float green = (arc4random() % 100) / 100.0;
+    float blue = (arc4random() % 100) / 100.0;
+    
+    UIColor *randomColor = [UIColor colorWithRed:red green:green blue:blue alpha:1.0];
+    self.circleColor = randomColor;
+}
+
+- (void)setCircleColor:(UIColor *)circleColor {
+    _circleColor = circleColor;
+    [self setNeedsDisplay];
 }
 
 @end

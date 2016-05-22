@@ -25,15 +25,20 @@
     CGRect screenRect = self.view.bounds;
     CGRect bigRect = screenRect;
     bigRect.size.width *= 2.0;
-    bigRect.size.height *= 2.0;
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [scrollView setPagingEnabled:YES];
     [self.view addSubview:scrollView];
     
-    RMDHypnosisView *hypnosisView = [[RMDHypnosisView alloc] initWithFrame:bigRect];
+    RMDHypnosisView *hypnosisView = [[RMDHypnosisView alloc] initWithFrame:screenRect];
     [scrollView addSubview:hypnosisView];
-    scrollView.contentSize = bigRect.size;
     
+    screenRect.origin.x += screenRect.size.width;
+    RMDHypnosisView *anotherView = [[RMDHypnosisView alloc] initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
+    scrollView.contentSize = bigRect.size;
+
 //    RMDHypnosisView *secondView = [[RMDHypnosisView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
 //    secondView.backgroundColor = [UIColor blueColor];
 //    [firstView addSubview:secondView];

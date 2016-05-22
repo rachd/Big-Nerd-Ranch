@@ -18,9 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGRect firstFrame = self.view.bounds;
-    RMDHypnosisView *firstView = [[RMDHypnosisView alloc] initWithFrame:firstFrame];
-    [self.view addSubview:firstView];
+//    CGRect firstFrame = self.view.bounds;
+//    RMDHypnosisView *firstView = [[RMDHypnosisView alloc] initWithFrame:firstFrame];
+//    [self.view addSubview:firstView];
+    
+    CGRect screenRect = self.view.bounds;
+    CGRect bigRect = screenRect;
+    bigRect.size.width *= 2.0;
+    bigRect.size.height *= 2.0;
+    
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    [self.view addSubview:scrollView];
+    
+    RMDHypnosisView *hypnosisView = [[RMDHypnosisView alloc] initWithFrame:bigRect];
+    [scrollView addSubview:hypnosisView];
+    scrollView.contentSize = bigRect.size;
     
 //    RMDHypnosisView *secondView = [[RMDHypnosisView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
 //    secondView.backgroundColor = [UIColor blueColor];

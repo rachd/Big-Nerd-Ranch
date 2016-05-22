@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "RMDHypnosisView.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     ViewController *vc = [[ViewController alloc] init];
-    
     [self.window setRootViewController:vc];
     
     self.window.backgroundColor = [UIColor whiteColor];

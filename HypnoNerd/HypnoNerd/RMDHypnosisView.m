@@ -11,6 +11,10 @@
 @interface RMDHypnosisView ()
 
 @property (strong, nonatomic) UIColor *circleColor;
+@property (nonatomic, strong) UISegmentedControl *segmentedControl;
+@property float red;
+@property float green;
+@property float blue;
 
 @end
 
@@ -20,6 +24,9 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        self.red = 0.0;
+        self.green = 0.0;
+        self.blue = 0.0;
         self.circleColor = [UIColor lightGrayColor];
     }
     return self;
@@ -91,7 +98,33 @@
     [logoImage drawInRect:logoBounds];
     
     CGContextRestoreGState(currentContext);
+    
+    self.segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Red", @"Green", @"Blue"]];
+    self.segmentedControl.tintColor = [UIColor blackColor];
+    self.segmentedControl.frame = CGRectMake(0, self.frame.size.height - self.frame.size.height / 5 + 30, self.frame.size.width, 50);
+    self.segmentedControl.momentary = YES;
+    self.segmentedControl.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    [self.segmentedControl addTarget:self action:@selector(changeColor:) forControlEvents:UIControlEventValueChanged];
+    [self addSubview:self.segmentedControl];
 
+}
+
+- (void)changeColor:(UISegmentedControl *)segment {
+    switch (segment.selectedSegmentIndex) {
+        case 0:
+            self.red = (arc4random() % 100) / 100.0;
+            break;
+        case 1:
+            self.green = (arc4random() % 100) / 100.0;
+            break;
+        case 2:
+            self.blue = (arc4random() % 100) / 100.0;
+            break;
+        default:
+            break;
+    }
+    UIColor *newColor = [UIColor colorWithRed:self.red green:self.green blue:self.blue alpha:1.0];
+    self.circleColor = newColor;
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

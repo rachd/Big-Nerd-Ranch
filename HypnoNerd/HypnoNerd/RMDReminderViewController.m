@@ -42,6 +42,11 @@
     [self.view addSubview:self.reminderButton];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.datePicker.minimumDate = [NSDate dateWithTimeIntervalSinceNow:60];
+}
+
 - (void)addReminder:(id)sender {
     NSDate *date = self.datePicker.date;
     NSLog(@"Setting a reminder for %@", date);

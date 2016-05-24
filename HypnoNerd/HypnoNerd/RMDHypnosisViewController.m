@@ -11,8 +11,8 @@
 
 @implementation RMDHypnosisViewController
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (instancetype)init {
+    self = [super init];
     if (self) {
         self.tabBarItem.title = @"Hypnotize";
         UIImage *image = [UIImage imageNamed:@"Hypno.png"];

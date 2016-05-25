@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RMDHypnosisView.h"
 
 @interface ViewController : UIViewController
 
+@property UIScrollView *scrollView;
+@property RMDHypnosisView *hypnosisView;
 
 @end
 

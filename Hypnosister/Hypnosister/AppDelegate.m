@@ -12,6 +12,8 @@
 
 @interface AppDelegate ()
 
+@property ViewController *vc;
+
 @end
 
 @implementation AppDelegate
@@ -20,8 +22,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    ViewController *vc = [[ViewController alloc] init];
-    [self.window setRootViewController:vc];
+    self.vc = [[ViewController alloc] init];
+    [self.window setRootViewController:self.vc];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

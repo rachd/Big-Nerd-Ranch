@@ -7,9 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "RMDHypnosisView.h"
 
-@interface ViewController ()
+@interface ViewController () <UIScrollViewDelegate>
 
 @end
 
@@ -26,18 +25,22 @@
     CGRect bigRect = screenRect;
     bigRect.size.width *= 2.0;
     
-    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-    [scrollView setPagingEnabled:YES];
-    [self.view addSubview:scrollView];
+    self.scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
+    self.scrollView.delegate = self;
+    [self.scrollView setPagingEnabled:NO];
+    self.scrollView.minimumZoomScale = 1.0;
+    self.scrollView.maximumZoomScale = 2.0;
     
-    RMDHypnosisView *hypnosisView = [[RMDHypnosisView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:hypnosisView];
+    [self.view addSubview:self.scrollView];
     
-    screenRect.origin.x += screenRect.size.width;
-    RMDHypnosisView *anotherView = [[RMDHypnosisView alloc] initWithFrame:screenRect];
-    [scrollView addSubview:anotherView];
+    self.hypnosisView = [[RMDHypnosisView alloc] initWithFrame:screenRect];
+    [self.scrollView addSubview:self.hypnosisView];
     
-    scrollView.contentSize = bigRect.size;
+//    screenRect.origin.x += screenRect.size.width;
+//    RMDHypnosisView *anotherView = [[RMDHypnosisView alloc] initWithFrame:screenRect];
+//    [self.scrollView addSubview:anotherView];
+    
+    self.scrollView.contentSize = screenRect.size;
 
 //    RMDHypnosisView *secondView = [[RMDHypnosisView alloc] initWithFrame:CGRectMake(20, 30, 50, 50)];
 //    secondView.backgroundColor = [UIColor blueColor];
@@ -48,6 +51,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.hypnosisView;
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale {
+    NSLog(@"%f", scale);
+
 }
 
 @end

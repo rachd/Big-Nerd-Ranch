@@ -15,9 +15,6 @@
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly, strong) NSDate *dateCreated;
 
-@property (nonatomic, strong) RMDItem *containedItem;
-@property (nonatomic, weak) RMDItem *container;
-
 + (instancetype)randomItem;
 
 - (instancetype)initWithItemName:(NSString *)name valueInDollars:(int)value serialNumber:(NSString *)sNumber;

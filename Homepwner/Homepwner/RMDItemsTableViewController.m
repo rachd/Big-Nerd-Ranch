@@ -56,10 +56,10 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case 0:
-            return [[[RMDItemStore sharedStore] expensiveItems] count];
+            return [[[RMDItemStore sharedStore] expensiveItems] count] + 1;
             break;
         case 1:
-            return [[[RMDItemStore sharedStore] cheapItems] count];
+            return [[[RMDItemStore sharedStore] cheapItems] count] + 1;
             break;
         default:
             return 0;
@@ -70,17 +70,26 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    NSArray *items = [[NSArray alloc] init];
+     NSArray *items = [[NSArray alloc] init];
     if (indexPath.section == 0) {
-        items = [[RMDItemStore sharedStore] expensiveItems];
+        if (indexPath.row == [[[RMDItemStore sharedStore] expensiveItems] count]) {
+            cell.textLabel.text = @"No more items!";
+            return cell;
+        } else {
+            items = [[RMDItemStore sharedStore] expensiveItems];
+        }
     }
     else if (indexPath.section == 1) {
-        items = [[RMDItemStore sharedStore] cheapItems];
+        if (indexPath.row == [[[RMDItemStore sharedStore] cheapItems] count]) {
+            cell.textLabel.text = @"No more items!";
+            return cell;
+        } else {
+            items = [[RMDItemStore sharedStore] cheapItems];
+        }
     }
     RMDItem *item = items[indexPath.row];
         
     cell.textLabel.text = [item description];
-    
     return cell;
 }
 

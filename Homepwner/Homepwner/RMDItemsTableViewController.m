@@ -67,6 +67,19 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0 && indexPath.row == [[[RMDItemStore sharedStore] expensiveItems] count]) {
+        return 44;
+    }
+    
+    else if (indexPath.section == 1 && indexPath.row == [[[RMDItemStore sharedStore] cheapItems] count]) {
+        return 44;
+    }
+                                                         
+    else {
+        return 60;
+    }
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
@@ -90,6 +103,8 @@
     RMDItem *item = items[indexPath.row];
         
     cell.textLabel.text = [item description];
+    [cell.textLabel setFont:[UIFont systemFontOfSize:20]];
+    
     return cell;
 }
 

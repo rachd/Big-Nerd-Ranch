@@ -17,7 +17,7 @@
 @implementation RMDItemsTableViewController
 
 - (instancetype)init {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         for (int i = 0; i < 5; i++) {
             [[RMDItemStore sharedStore] createItem];
@@ -50,17 +50,33 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[[RMDItemStore sharedStore] allItems] count];
+    switch (section) {
+        case 0:
+            return [[[RMDItemStore sharedStore] expensiveItems] count];
+            break;
+        case 1:
+            return [[[RMDItemStore sharedStore] cheapItems] count];
+            break;
+        default:
+            return 0;
+            break;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    NSArray *items = [[RMDItemStore sharedStore] allItems];
+    NSArray *items = [[NSArray alloc] init];
+    if (indexPath.section == 0) {
+        items = [[RMDItemStore sharedStore] expensiveItems];
+    }
+    else if (indexPath.section == 1) {
+        items = [[RMDItemStore sharedStore] cheapItems];
+    }
     RMDItem *item = items[indexPath.row];
         
     cell.textLabel.text = [item description];

@@ -34,6 +34,8 @@
     self = [super init];
     if (self) {
         self.privateItems = [[NSMutableArray alloc] init];
+        self.expensiveItems = [[NSMutableArray alloc] init];
+        self.cheapItems = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -45,6 +47,11 @@
 - (RMDItem *)createItem {
     RMDItem *item = [RMDItem randomItem];
     [self.privateItems addObject:item];
+    if (item.valueInDollars >= 50) {
+        [self.expensiveItems addObject:item];
+    } else {
+        [self.cheapItems addObject:item];
+    }
     return item;
 }
 

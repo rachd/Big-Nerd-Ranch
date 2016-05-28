@@ -13,6 +13,8 @@
 @interface RMDItemStore : NSObject
 
 @property (nonatomic, readonly, copy) NSArray *allItems;
+@property (nonatomic, strong) NSMutableArray *expensiveItems;
+@property (nonatomic, strong) NSMutableArray *cheapItems;
 
 + (instancetype)sharedStore;
 - (RMDItem *)createItem;

@@ -18,5 +18,6 @@
 
 + (instancetype)sharedStore;
 - (RMDItem *)createItem;
+- (void)removeItem:(RMDItem *)item;
 
 @end

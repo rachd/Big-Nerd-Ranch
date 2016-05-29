@@ -55,4 +55,8 @@
     return item;
 }
 
+- (void)removeItem:(RMDItem *)item {
+    [self.privateItems removeObjectIdenticalTo:item];
+}
+
 @end

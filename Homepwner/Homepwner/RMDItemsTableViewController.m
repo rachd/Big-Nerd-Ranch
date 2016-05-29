@@ -18,20 +18,6 @@
 
 @implementation RMDItemsTableViewController
 
-- (instancetype)init {
-    self = [super initWithStyle:UITableViewStyleGrouped];
-    if (self) {
-        for (int i = 0; i < 5; i++) {
-            [[RMDItemStore sharedStore] createItem];
-        }
-    }
-    return self;
-}
-
-- (instancetype)initWithStyle:(UITableViewStyle)style {
-    return [self init];
-}
-
 - (UIView *)headerView {
     if (!_headerView) {
         [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
@@ -40,11 +26,20 @@
 }
 
 - (IBAction)addNewItem:(id)sender {
-    
+    RMDItem *newItem = [[RMDItemStore sharedStore] createItem];
+    NSInteger lastRow = [[[RMDItemStore sharedStore] allItems] indexOfObject:newItem];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
 - (IBAction)toggleEditingMode:(id)sender {
-    
+    if (self.isEditing) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
 }
 
 - (void)viewDidLoad {
@@ -69,32 +64,36 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case 0:
-            return [[[RMDItemStore sharedStore] expensiveItems] count] + 1;
-            break;
-        case 1:
-            return [[[RMDItemStore sharedStore] cheapItems] count] + 1;
-            break;
-        default:
-            return 0;
-            break;
-    }
+    return [[[RMDItemStore sharedStore] allItems] count] + 1;
+    //    switch (section) {
+//        case 0:
+//            return [[[RMDItemStore sharedStore] expensiveItems] count] + 1;
+//            break;
+//        case 1:
+//            return [[[RMDItemStore sharedStore] cheapItems] count] + 1;
+//            break;
+//        default:
+//            return 0;
+//            break;
+//    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0 && indexPath.row == [[[RMDItemStore sharedStore] expensiveItems] count]) {
+//    if (indexPath.section == 0 && indexPath.row == [[[RMDItemStore sharedStore] expensiveItems] count]) {
+//        return 44;
+//    }
+//    
+//    else if (indexPath.section == 1 && indexPath.row == [[[RMDItemStore sharedStore] cheapItems] count]) {
+//        return 44;
+//    }
+//                                                         
+    if (indexPath.row == [[[RMDItemStore sharedStore] allItems] count]) {
         return 44;
     }
-    
-    else if (indexPath.section == 1 && indexPath.row == [[[RMDItemStore sharedStore] cheapItems] count]) {
-        return 44;
-    }
-                                                         
     else {
         return 60;
     }
@@ -103,21 +102,27 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
      NSArray *items = [[NSArray alloc] init];
-    if (indexPath.section == 0) {
-        if (indexPath.row == [[[RMDItemStore sharedStore] expensiveItems] count]) {
-            cell.textLabel.text = @"No more items!";
-            return cell;
-        } else {
-            items = [[RMDItemStore sharedStore] expensiveItems];
-        }
-    }
-    else if (indexPath.section == 1) {
-        if (indexPath.row == [[[RMDItemStore sharedStore] cheapItems] count]) {
-            cell.textLabel.text = @"No more items!";
-            return cell;
-        } else {
-            items = [[RMDItemStore sharedStore] cheapItems];
-        }
+//    if (indexPath.section == 0) {
+//        if (indexPath.row == [[[RMDItemStore sharedStore] expensiveItems] count]) {
+//            cell.textLabel.text = @"No more items!";
+//            return cell;
+//        } else {
+//            items = [[RMDItemStore sharedStore] expensiveItems];
+//        }
+//    }
+//    else if (indexPath.section == 1) {
+//        if (indexPath.row == [[[RMDItemStore sharedStore] cheapItems] count]) {
+//            cell.textLabel.text = @"No more items!";
+//            return cell;
+//        } else {
+//            items = [[RMDItemStore sharedStore] cheapItems];
+//        }
+//    }
+    if (indexPath.row == [[[RMDItemStore sharedStore] allItems] count]) {
+        cell.textLabel.text = @"No more items!";
+        return cell;
+    } else {
+        items = [[RMDItemStore sharedStore] allItems];
     }
     RMDItem *item = items[indexPath.row];
         

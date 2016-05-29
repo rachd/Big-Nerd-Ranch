@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    RMDItemsTableViewController *itemsVC = [[RMDItemsTableViewController alloc] init];
+    RMDItemsTableViewController *itemsVC = [[RMDItemsTableViewController alloc] initWithStyle:UITableViewStylePlain];
    
     [self.window setRootViewController:itemsVC];
     self.window.backgroundColor = [UIColor whiteColor];

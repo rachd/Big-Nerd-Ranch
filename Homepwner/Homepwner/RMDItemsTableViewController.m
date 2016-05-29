@@ -12,6 +12,8 @@
 
 @interface RMDItemsTableViewController ()
 
+@property (nonatomic, strong) IBOutlet UIView *headerView;
+
 @end
 
 @implementation RMDItemsTableViewController
@@ -30,11 +32,28 @@
     return [self init];
 }
 
+- (UIView *)headerView {
+    if (!_headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];
+    }
+    return _headerView;
+}
+
+- (IBAction)addNewItem:(id)sender {
+    
+}
+
+- (IBAction)toggleEditingMode:(id)sender {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     
+    UIView *header = self.headerView;
+    [self.tableView setTableHeaderView:header];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

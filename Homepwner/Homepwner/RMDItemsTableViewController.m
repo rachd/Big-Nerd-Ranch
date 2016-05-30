@@ -7,6 +7,7 @@
 //
 
 #import "RMDItemsTableViewController.h"
+#import "RMDDetailViewController.h"
 #import "RMDItemStore.h"
 #import "RMDItem.h"
 
@@ -130,6 +131,16 @@
     [cell.textLabel setFont:[UIFont systemFontOfSize:20]];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row != [[[RMDItemStore sharedStore] allItems] count]) {
+        RMDDetailViewController *detailViewController = [[RMDDetailViewController alloc] init];
+        NSArray *items = [[RMDItemStore sharedStore] allItems];
+        RMDItem *selectedItem = items[indexPath.row];
+        detailViewController.item = selectedItem;
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

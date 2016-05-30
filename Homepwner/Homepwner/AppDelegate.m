@@ -21,7 +21,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     RMDItemsTableViewController *itemsVC = [[RMDItemsTableViewController alloc] initWithStyle:UITableViewStylePlain];
    
-    [self.window setRootViewController:itemsVC];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsVC];
+    [self.window setRootViewController:navController];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

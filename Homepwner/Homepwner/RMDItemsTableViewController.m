@@ -19,6 +19,15 @@
 
 @implementation RMDItemsTableViewController
 
+- (instancetype)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwner";
+    }
+    return self;
+}
+
 - (UIView *)headerView {
     if (!_headerView) {
         [[NSBundle mainBundle] loadNibNamed:@"HeaderView" owner:self options:nil];

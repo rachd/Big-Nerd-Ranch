@@ -18,7 +18,6 @@
 		CC26BC631CF54104004A06CF /* RMDItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */; };
 		CC26BC661CF7ECAC004A06CF /* RMDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC651CF7ECAC004A06CF /* RMDItem.m */; };
 		CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC681CF7ED16004A06CF /* RMDItemStore.m */; };
-		CC26BCFB1CFB7324004A06CF /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC26BCFA1CFB7324004A06CF /* HeaderView.xib */; };
 		CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */; };
 		CC26BD001CFC9D8A004A06CF /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */; };
 /* End PBXBuildFile section */
@@ -63,7 +62,6 @@
 		CC26BC651CF7ECAC004A06CF /* RMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDItem.m; path = ../../RandomItems/RandomItems/RMDItem.m; sourceTree = "<group>"; };
 		CC26BC671CF7ED16004A06CF /* RMDItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItemStore.h; sourceTree = "<group>"; };
 		CC26BC681CF7ED16004A06CF /* RMDItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItemStore.m; sourceTree = "<group>"; };
-		CC26BCFA1CFB7324004A06CF /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		CC26BCFC1CFC9D8A004A06CF /* RMDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDDetailViewController.h; sourceTree = "<group>"; };
 		CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDDetailViewController.m; sourceTree = "<group>"; };
 		CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDDetailViewController.xib; sourceTree = "<group>"; };
@@ -128,7 +126,6 @@
 				CC26BC681CF7ED16004A06CF /* RMDItemStore.m */,
 				CC26BC611CF54104004A06CF /* RMDItemsTableViewController.h */,
 				CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */,
-				CC26BCFA1CFB7324004A06CF /* HeaderView.xib */,
 				CC26BC311CF54034004A06CF /* ViewController.h */,
 				CC26BC321CF54034004A06CF /* ViewController.m */,
 				CC26BC341CF54034004A06CF /* Main.storyboard */,
@@ -273,7 +270,6 @@
 				CC26BD001CFC9D8A004A06CF /* RMDDetailViewController.xib in Resources */,
 				CC26BC381CF54034004A06CF /* Assets.xcassets in Resources */,
 				CC26BC361CF54034004A06CF /* Main.storyboard in Resources */,
-				CC26BCFB1CFB7324004A06CF /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
 
@@ -51,6 +53,10 @@
 - (void)setItem:(RMDItem *)item {
     _item = item;
     self.navigationItem.title = _item.itemName;
+}
+
+- (IBAction)takePicture:(id)sender {
+    
 }
 
 @end

@@ -20,6 +20,7 @@
 		CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC681CF7ED16004A06CF /* RMDItemStore.m */; };
 		CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */; };
 		CC26BD001CFC9D8A004A06CF /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */; };
+		CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		CC26BCFC1CFC9D8A004A06CF /* RMDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDDetailViewController.h; sourceTree = "<group>"; };
 		CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDDetailViewController.m; sourceTree = "<group>"; };
 		CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDDetailViewController.xib; sourceTree = "<group>"; };
+		CCB2C8B21D0231F0000F6BB1 /* RMDImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDImageStore.h; sourceTree = "<group>"; };
+		CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,8 @@
 				CC26BC651CF7ECAC004A06CF /* RMDItem.m */,
 				CC26BC671CF7ED16004A06CF /* RMDItemStore.h */,
 				CC26BC681CF7ED16004A06CF /* RMDItemStore.m */,
+				CCB2C8B21D0231F0000F6BB1 /* RMDImageStore.h */,
+				CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */,
 				CC26BC611CF54104004A06CF /* RMDItemsTableViewController.h */,
 				CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */,
 				CC26BC311CF54034004A06CF /* ViewController.h */,
@@ -299,6 +304,7 @@
 				CC26BC331CF54034004A06CF /* ViewController.m in Sources */,
 				CC26BC301CF54034004A06CF /* AppDelegate.m in Sources */,
 				CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */,
+				CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */,
 				CC26BC2D1CF54034004A06CF /* main.m in Sources */,
 				CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */,
 			);

@@ -11,7 +11,7 @@
 #import "RMDItemStore.h"
 #import "RMDImageStore.h"
 
-@interface RMDDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+@interface RMDDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
@@ -39,6 +39,10 @@
         dateFormatter.timeStyle = NSDateFormatterNoStyle;
     }
     self.dateLabel.text = [dateFormatter stringFromDate:item.dateCreated];
+    
+    NSString *itemKey = self.item.itemKey;
+    UIImage *imageToDisplay = [[RMDImageStore sharedStore] imageForKey:itemKey];
+    self.imageView.image = imageToDisplay;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -73,6 +77,15 @@
     [[RMDImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     self.imageView.image = image;
     [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+- (IBAction)backgroundTapped:(id)sender {
+    [self.view endEditing:YES];
 }
 
 @end

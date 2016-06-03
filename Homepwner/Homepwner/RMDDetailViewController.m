@@ -9,7 +9,7 @@
 #import "RMDDetailViewController.h"
 #import "RMDItem.h"
 
-@interface RMDDetailViewController ()
+@interface RMDDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
@@ -56,7 +56,14 @@
 }
 
 - (IBAction)takePicture:(id)sender {
-    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    imagePicker.delegate = self;
+    [self presentViewController:imagePicker animated:YES completion:NULL];
 }
 
 @end

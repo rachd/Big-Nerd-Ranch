@@ -8,6 +8,8 @@
 
 #import "RMDDetailViewController.h"
 #import "RMDItem.h"
+#import "RMDItemStore.h"
+#import "RMDImageStore.h"
 
 @interface RMDDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -68,6 +70,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [[RMDImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     self.imageView.image = image;
     [self dismissViewControllerAnimated:YES completion:NULL];
 }

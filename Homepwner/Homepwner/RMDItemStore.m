@@ -8,6 +8,7 @@
 
 #import "RMDItemStore.h"
 #import "RMDItem.h"
+#import "RMDImageStore.h"
 
 @interface RMDItemStore ()
 
@@ -56,6 +57,7 @@
 }
 
 - (void)removeItem:(RMDItem *)item {
+    [[RMDImageStore sharedStore] deleteImageForKey:item.itemKey];
     [self.privateItems removeObjectIdenticalTo:item];
 }
 

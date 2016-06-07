@@ -48,6 +48,21 @@
     return self;
 }
 
+- (instancetype)initWithItemName:(NSString *)name valueInDollars:(int)value serialNumber:(NSString *)sNumber date:(NSDate *)dateCreated {
+    self = [super init];
+    if (self) {
+        _itemName = name;
+        _valueInDollars = value;
+        _serialNumber = sNumber;
+        _dateCreated = dateCreated;
+        
+        NSUUID *uuid = [[NSUUID alloc] init];
+        NSString *key = [uuid UUIDString];
+        _itemKey = key;
+    }
+    return self;
+}
+
 - (instancetype)initWithItemName:(NSString *)name serialNumber:(NSString *)sNumber {
     return [self initWithItemName:name valueInDollars:0 serialNumber:sNumber];
 }

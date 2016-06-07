@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CC26BC2D1CF54034004A06CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC2C1CF54034004A06CF /* main.m */; };
 		CC26BC301CF54034004A06CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC2F1CF54034004A06CF /* AppDelegate.m */; };
-		CC26BC331CF54034004A06CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC321CF54034004A06CF /* ViewController.m */; };
 		CC26BC361CF54034004A06CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC26BC341CF54034004A06CF /* Main.storyboard */; };
 		CC26BC381CF54034004A06CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC26BC371CF54034004A06CF /* Assets.xcassets */; };
 		CC26BC3B1CF54034004A06CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC26BC391CF54034004A06CF /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */; };
 		CC26BD001CFC9D8A004A06CF /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */; };
 		CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */; };
+		CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +45,6 @@
 		CC26BC2C1CF54034004A06CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC26BC2E1CF54034004A06CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC26BC2F1CF54034004A06CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC26BC311CF54034004A06CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC26BC321CF54034004A06CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC26BC351CF54034004A06CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC26BC371CF54034004A06CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC26BC3A1CF54034004A06CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +66,8 @@
 		CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDDetailViewController.xib; sourceTree = "<group>"; };
 		CCB2C8B21D0231F0000F6BB1 /* RMDImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDImageStore.h; sourceTree = "<group>"; };
 		CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageStore.m; sourceTree = "<group>"; };
+		CCE8D6881D0658CD00393A4C /* RMDDatePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDDatePickerViewController.h; sourceTree = "<group>"; };
+		CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDDatePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +124,8 @@
 				CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */,
 				CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */,
 				CC26BC641CF7ECAC004A06CF /* RMDItem.h */,
+				CCE8D6881D0658CD00393A4C /* RMDDatePickerViewController.h */,
+				CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */,
 				CC26BC651CF7ECAC004A06CF /* RMDItem.m */,
 				CC26BC671CF7ED16004A06CF /* RMDItemStore.h */,
 				CC26BC681CF7ED16004A06CF /* RMDItemStore.m */,
@@ -131,8 +133,6 @@
 				CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */,
 				CC26BC611CF54104004A06CF /* RMDItemsTableViewController.h */,
 				CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */,
-				CC26BC311CF54034004A06CF /* ViewController.h */,
-				CC26BC321CF54034004A06CF /* ViewController.m */,
 				CC26BC341CF54034004A06CF /* Main.storyboard */,
 				CC26BC371CF54034004A06CF /* Assets.xcassets */,
 				CC26BC391CF54034004A06CF /* LaunchScreen.storyboard */,
@@ -301,7 +301,7 @@
 			files = (
 				CC26BC631CF54104004A06CF /* RMDItemsTableViewController.m in Sources */,
 				CC26BC661CF7ECAC004A06CF /* RMDItem.m in Sources */,
-				CC26BC331CF54034004A06CF /* ViewController.m in Sources */,
+				CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */,
 				CC26BC301CF54034004A06CF /* AppDelegate.m in Sources */,
 				CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */,
 				CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */,

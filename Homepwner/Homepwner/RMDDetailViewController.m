@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIButton *dateButton;
+@property (weak, nonatomic) IBOutlet UIButton *removeImageButton;
 
 @end
 
@@ -67,6 +68,11 @@
     self.navigationItem.title = _item.itemName;
 }
 
+- (IBAction)removeImage:(id)sender {
+    self.imageView.image = nil;
+    [[RMDImageStore sharedStore] deleteImageForKey:self.item.itemKey];
+}
+
 - (IBAction)takePicture:(id)sender {
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
@@ -75,6 +81,8 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     imagePicker.delegate = self;
+    imagePicker.allowsEditing = YES;
+    
     [self presentViewController:imagePicker animated:YES completion:NULL];
 }
 

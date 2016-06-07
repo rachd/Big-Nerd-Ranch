@@ -11,6 +11,7 @@
                 <outlet property="dateLabel" destination="fba-cN-hc8" id="cyh-UO-rFN"/>
                 <outlet property="imageView" destination="z6e-hC-Bgz" id="fAg-vt-E0o"/>
                 <outlet property="nameField" destination="9VI-5b-2F2" id="t2i-7x-bcu"/>
+                <outlet property="removeImageButton" destination="JJN-JK-T2S" id="bsv-cM-9ew"/>
                 <outlet property="serialNumberField" destination="AA4-D0-jut" id="CqF-yD-1Ts"/>
                 <outlet property="toolbar" destination="GF8-Yj-czg" id="5GI-RL-iDE"/>
                 <outlet property="valueField" destination="LDA-h4-mSI" id="eci-hn-yaA"/>
@@ -88,6 +89,13 @@
                     <state key="normal" title="Change Date"/>
                     <connections>
                         <action selector="changeDate:" destination="-1" eventType="touchUpInside" id="zOf-Bc-3hH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJN-JK-T2S">
+                    <rect key="frame" x="22" y="440" width="30" height="30"/>
+                    <state key="normal" title="X"/>
+                    <connections>
+                        <action selector="removeImage:" destination="-1" eventType="touchUpInside" id="mCx-Yk-Y2g"/>
                     </connections>
                 </button>
             </subviews>

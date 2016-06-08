@@ -8,6 +8,7 @@
 
 #import "RMDDrawView.h"
 #import "RMDLine.h"
+#import <Math.h>
 
 @interface RMDDrawView ()
 
@@ -40,8 +41,10 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [[UIColor blackColor] set];
     for (RMDLine *line in self.finishedLines) {
+        float colorFloat = fabsf(fmodf(line.angle, 1.0));
+        UIColor *color = [UIColor colorWithRed:(1.0 - colorFloat) green:1.0 blue:colorFloat alpha:1.0];
+        [color set];
         [self strokeLine:line];
     }
     
@@ -70,8 +73,10 @@
     for (UITouch *touch in touches) {
         NSValue *key = [NSValue valueWithNonretainedObject:touch];
         RMDLine *line = self.linesInProgress[key];
-        
+
         line.end = [touch locationInView:self];
+        line.angle = [line calculateAngleFromStart:line.begin andEnd:line.end];
+
     }
     
     [self setNeedsDisplay];
@@ -81,7 +86,6 @@
     for (UITouch *touch in touches) {
         NSValue *key = [NSValue valueWithNonretainedObject:touch];
         RMDLine *line = self.linesInProgress[key];
-        
         [self.finishedLines addObject:line];
         [self.linesInProgress removeObjectForKey:key];
     }

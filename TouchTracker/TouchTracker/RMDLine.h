@@ -13,5 +13,8 @@
 
 @property (nonatomic) CGPoint begin;
 @property (nonatomic) CGPoint end;
+@property (nonatomic) CGFloat angle;
+
+- (CGFloat)calculateAngleFromStart:(CGPoint)start andEnd:(CGPoint)end;
 
 @end

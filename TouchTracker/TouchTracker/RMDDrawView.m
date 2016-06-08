@@ -52,7 +52,6 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInView:self];
         
@@ -68,7 +67,6 @@
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
     for (UITouch *touch in touches) {
         NSValue *key = [NSValue valueWithNonretainedObject:touch];
         RMDLine *line = self.linesInProgress[key];
@@ -80,12 +78,20 @@
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    NSLog(@"%@", NSStringFromSelector(_cmd));
     for (UITouch *touch in touches) {
         NSValue *key = [NSValue valueWithNonretainedObject:touch];
         RMDLine *line = self.linesInProgress[key];
         
         [self.finishedLines addObject:line];
+        [self.linesInProgress removeObjectForKey:key];
+    }
+    
+    [self setNeedsDisplay];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    for (UITouch *touch in touches) {
+        NSValue *key = [NSValue valueWithNonretainedObject:touch];
         [self.linesInProgress removeObjectForKey:key];
     }
     

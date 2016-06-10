@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,28 +17,28 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shh-p1-C78">
-                    <rect key="frame" x="0.0" y="94" width="320" height="31"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shh-p1-C78">
+                    <rect key="frame" x="20" y="94" width="280" height="0.0"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxN-W4-8H5">
-                    <rect key="frame" x="0.0" y="319" width="320" height="33"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxN-W4-8H5">
+                    <rect key="frame" x="20" y="331.5" width="280" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-ML-ZcL">
-                    <rect key="frame" x="0.0" y="369" width="320" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTY-ML-ZcL">
+                    <rect key="frame" x="20" y="369" width="280" height="30"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Show Answer"/>
                     <connections>
                         <action selector="showAnswer:" destination="-1" eventType="touchUpInside" id="UHA-2o-aHB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piO-pi-ObH">
-                    <rect key="frame" x="0.0" y="133" width="320" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piO-pi-ObH">
+                    <rect key="frame" x="20" y="133" width="280" height="30"/>
                     <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Show Question"/>
                     <connections>
@@ -47,6 +47,20 @@
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="piO-pi-ObH" secondAttribute="trailing" constant="20" id="6V2-2n-o9o"/>
+                <constraint firstItem="Shh-p1-C78" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="F4F-rq-SfB"/>
+                <constraint firstAttribute="bottom" secondItem="fTY-ML-ZcL" secondAttribute="bottom" constant="169" id="HRP-0G-nEM"/>
+                <constraint firstItem="Shh-p1-C78" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="IZ3-tD-fik"/>
+                <constraint firstItem="fTY-ML-ZcL" firstAttribute="top" secondItem="vxN-W4-8H5" secondAttribute="bottom" constant="17" id="IzZ-yx-kxZ"/>
+                <constraint firstItem="piO-pi-ObH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="133" id="T4F-g6-KzF"/>
+                <constraint firstAttribute="trailing" secondItem="fTY-ML-ZcL" secondAttribute="trailing" constant="20" id="al0-Ei-z6K"/>
+                <constraint firstItem="fTY-ML-ZcL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="eoP-d9-q6Z"/>
+                <constraint firstAttribute="trailing" secondItem="vxN-W4-8H5" secondAttribute="trailing" constant="20" id="g3g-JF-L19"/>
+                <constraint firstItem="vxN-W4-8H5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="jkQ-EG-4O2"/>
+                <constraint firstAttribute="trailing" secondItem="Shh-p1-C78" secondAttribute="trailing" constant="20" id="kb7-st-ady"/>
+                <constraint firstItem="piO-pi-ObH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="uMU-lL-xng"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

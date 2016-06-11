@@ -32,9 +32,14 @@
 
 - (IBAction)addNewItem:(id)sender {
     RMDItem *newItem = [[RMDItemStore sharedStore] createItem];
-    NSInteger lastRow = [[[RMDItemStore sharedStore] allItems] indexOfObject:newItem];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    RMDDetailViewController *detailViewController = [[RMDDetailViewController alloc] initForNewItem:YES];
+    detailViewController.item = newItem;
+    detailViewController.dismissBlock = ^{
+        [self.tableView reloadData];
+    };
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+    navController.modalPresentationStyle = UIModalPresentationFormSheet;
+    [self presentViewController:navController animated:YES completion:NULL];
 }
 
 - (void)viewDidLoad {
@@ -91,7 +96,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row != [[[RMDItemStore sharedStore] allItems] count]) {
-        RMDDetailViewController *detailViewController = [[RMDDetailViewController alloc] init];
+        RMDDetailViewController *detailViewController = [[RMDDetailViewController alloc] initForNewItem:NO];
         NSArray *items = [[RMDItemStore sharedStore] allItems];
         RMDItem *selectedItem = items[indexPath.row];
         detailViewController.item = selectedItem;

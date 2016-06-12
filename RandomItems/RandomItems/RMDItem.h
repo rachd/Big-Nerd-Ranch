@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface RMDItem : NSObject <NSCoding>
 
@@ -15,6 +16,7 @@
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, strong) NSDate *dateCreated;
 @property (nonatomic, copy) NSString *itemKey;
+@property (nonatomic, strong) UIImage *thumbnail;
 
 
 + (instancetype)randomItem;
@@ -26,5 +28,7 @@
 - (instancetype)initWithItemName:(NSString *)name serialNumber:(NSString *) sNumber;
 
 - (instancetype)initWithItemName:(NSString *)name;
+
+- (void)setThumbnailFromImage:(UIImage *)image;
 
 @end

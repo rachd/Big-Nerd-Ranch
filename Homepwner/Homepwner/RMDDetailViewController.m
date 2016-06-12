@@ -186,6 +186,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    [self.item setThumbnailFromImage:image];
     [[RMDImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     self.imageView.image = image;
     if (self.imagePickerPopover) {

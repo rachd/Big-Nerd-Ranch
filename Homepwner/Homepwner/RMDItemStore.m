@@ -35,7 +35,11 @@
 - (instancetype)initPrivate {
     self = [super init];
     if (self) {
-        self.privateItems = [[NSMutableArray alloc] init];
+        NSString *path = [self itemArchivePath];
+        _privateItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        if (!_privateItems) {
+            _privateItems = [[NSMutableArray alloc] init];
+        }
         self.expensiveItems = [[NSMutableArray alloc] init];
         self.cheapItems = [[NSMutableArray alloc] init];
     }

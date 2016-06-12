@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RMDItemsTableViewController.h"
+#import "RMDItemStore.h"
 
 @interface AppDelegate ()
 
@@ -35,8 +36,12 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    BOOL success = [[RMDItemStore sharedStore] saveChanges];
+    if (success) {
+        NSLog(@"Saved all the items");
+    } else {
+        NSLog(@"Could not save the items");
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

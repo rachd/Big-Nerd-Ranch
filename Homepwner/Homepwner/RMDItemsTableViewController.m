@@ -10,6 +10,7 @@
 #import "RMDDetailViewController.h"
 #import "RMDItemStore.h"
 #import "RMDItem.h"
+#import "RMDItemCell.h"
 
 @interface RMDItemsTableViewController ()
 
@@ -44,8 +45,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    UINib *nib = [UINib nibWithNibName:@"RMDItemCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"RMDItemCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -78,17 +79,19 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    RMDItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RMDItemCell" forIndexPath:indexPath];
      NSArray *items = [[NSArray alloc] init];
     if (indexPath.row == [[[RMDItemStore sharedStore] allItems] count]) {
-        cell.textLabel.text = @"No more items!";
+        cell.nameLabel.text = @"No more items!";
         return cell;
     } else {
         items = [[RMDItemStore sharedStore] allItems];
     }
     RMDItem *item = items[indexPath.row];
         
-    cell.textLabel.text = [item description];
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     [cell.textLabel setFont:[UIFont systemFontOfSize:20]];
     
     return cell;

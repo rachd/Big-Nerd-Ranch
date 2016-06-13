@@ -11,10 +11,13 @@
                 <outlet property="dateButton" destination="6tH-Uv-orU" id="PfR-98-dDM"/>
                 <outlet property="dateLabel" destination="fba-cN-hc8" id="cyh-UO-rFN"/>
                 <outlet property="nameField" destination="9VI-5b-2F2" id="t2i-7x-bcu"/>
+                <outlet property="nameLabel" destination="nK3-dv-0G5" id="RrR-ma-vcs"/>
                 <outlet property="removeImageButton" destination="JJN-JK-T2S" id="bsv-cM-9ew"/>
                 <outlet property="serialNumberField" destination="AA4-D0-jut" id="CqF-yD-1Ts"/>
+                <outlet property="serialNumberLabel" destination="hkz-iq-otn" id="YyH-nb-WkQ"/>
                 <outlet property="toolbar" destination="GF8-Yj-czg" id="5GI-RL-iDE"/>
                 <outlet property="valueField" destination="LDA-h4-mSI" id="eci-hn-yaA"/>
+                <outlet property="valueLabel" destination="jEu-4f-Xq4" id="oLA-hJ-b40"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

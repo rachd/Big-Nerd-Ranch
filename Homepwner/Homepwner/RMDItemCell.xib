@@ -34,6 +34,13 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yma-HP-bjt">
+                        <rect key="frame" x="8" y="2" width="40" height="40"/>
+                        <connections>
+                            <action selector="showImage:" destination="GxD-5T-znD" eventType="touchUpInside" id="qmb-sB-Ini"/>
+                            <action selector="shwoImage:" destination="GxD-5T-znD" eventType="touchUpInside" id="KHB-Mo-w6N"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzK-IH-7WK">
                         <rect key="frame" x="62" y="29" width="31" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -42,14 +49,18 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="XtY-tv-16k" firstAttribute="bottom" secondItem="Yma-HP-bjt" secondAttribute="bottom" id="D4I-fz-C0B"/>
                     <constraint firstItem="TzK-IH-7WK" firstAttribute="leading" secondItem="XtY-tv-16k" secondAttribute="trailing" constant="14" id="ISZ-9X-M14"/>
                     <constraint firstItem="Fkn-hO-J5y" firstAttribute="leading" secondItem="Z3R-l1-dmv" secondAttribute="trailing" constant="10" id="NOd-EZ-4Fw"/>
                     <constraint firstItem="XtY-tv-16k" firstAttribute="leading" secondItem="3DM-en-pdN" secondAttribute="leadingMargin" id="QDp-m1-1Vd"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Fkn-hO-J5y" secondAttribute="trailing" id="Ud5-pQ-RXe"/>
                     <constraint firstItem="Fkn-hO-J5y" firstAttribute="leading" secondItem="TzK-IH-7WK" secondAttribute="trailing" constant="195" id="Wgf-UT-sjp"/>
                     <constraint firstAttribute="topMargin" secondItem="Z3R-l1-dmv" secondAttribute="top" id="aX7-XB-zj5"/>
+                    <constraint firstItem="XtY-tv-16k" firstAttribute="leading" secondItem="Yma-HP-bjt" secondAttribute="leading" id="dHX-mf-W5t"/>
                     <constraint firstItem="Z3R-l1-dmv" firstAttribute="leading" secondItem="XtY-tv-16k" secondAttribute="trailing" constant="14" id="frE-T8-wls"/>
+                    <constraint firstItem="XtY-tv-16k" firstAttribute="top" secondItem="Yma-HP-bjt" secondAttribute="top" id="jQz-Kn-RAV"/>
                     <constraint firstItem="XtY-tv-16k" firstAttribute="centerY" secondItem="3DM-en-pdN" secondAttribute="centerY" id="kzz-XE-ZTa"/>
+                    <constraint firstItem="XtY-tv-16k" firstAttribute="trailing" secondItem="Yma-HP-bjt" secondAttribute="trailing" id="muB-U2-d3f"/>
                     <constraint firstItem="Fkn-hO-J5y" firstAttribute="centerY" secondItem="3DM-en-pdN" secondAttribute="centerY" id="nr9-Da-OeA"/>
                     <constraint firstAttribute="bottomMargin" secondItem="TzK-IH-7WK" secondAttribute="bottom" constant="-7.5" id="snN-s3-Ta7"/>
                 </constraints>

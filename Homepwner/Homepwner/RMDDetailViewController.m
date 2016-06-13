@@ -24,6 +24,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *dateButton;
 @property (weak, nonatomic) IBOutlet UIButton *removeImageButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 
 @end
 
@@ -43,6 +46,11 @@
                                                                                         action:@selector(cancel:)];
             self.navigationItem.leftBarButtonItem = cancelItem;
         }
+        NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self
+                          selector:@selector(updateFonts)
+                              name:UIContentSizeCategoryDidChangeNotification
+                            object:nil];
     }
     return self;
 }
@@ -74,6 +82,8 @@
     NSString *itemKey = self.item.itemKey;
     UIImage *imageToDisplay = [[RMDImageStore sharedStore] imageForKey:itemKey];
     self.imageView.image = imageToDisplay;
+    
+    [self updateFonts];
 }
 
 - (void)viewDidLoad {
@@ -204,6 +214,18 @@
 
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+}
+
+- (void)updateFonts {
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+    self.dateLabel.font = font;
+    
+    self.nameField.font = font;
+    self.serialNumberField.font = font;
+    self.valueField.font = font;
 }
 
 @end

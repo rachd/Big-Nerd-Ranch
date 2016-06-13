@@ -94,7 +94,9 @@
     cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     cell.thumbnailView.image = item.thumbnail;
     [cell.textLabel setFont:[UIFont systemFontOfSize:20]];
-    
+    cell.actionBlock = ^{
+        NSLog(@"Going to show image");
+    };
     return cell;
 }
 

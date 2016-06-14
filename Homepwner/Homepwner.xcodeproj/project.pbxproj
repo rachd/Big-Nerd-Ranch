@@ -19,6 +19,7 @@
 		CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC681CF7ED16004A06CF /* RMDItemStore.m */; };
 		CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */; };
 		CC26BD001CFC9D8A004A06CF /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */; };
+		CC75C6A61D102BC9004511C5 /* RMDImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75C6A51D102BC9004511C5 /* RMDImageViewController.m */; };
 		CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */; };
 		CCC299441D0DD4E70042D0F0 /* RMDItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */; };
 		CCC299461D0DD53C0042D0F0 /* RMDItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */; };
@@ -66,6 +67,8 @@
 		CC26BCFC1CFC9D8A004A06CF /* RMDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDDetailViewController.h; sourceTree = "<group>"; };
 		CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDDetailViewController.m; sourceTree = "<group>"; };
 		CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDDetailViewController.xib; sourceTree = "<group>"; };
+		CC75C6A41D102BC9004511C5 /* RMDImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDImageViewController.h; sourceTree = "<group>"; };
+		CC75C6A51D102BC9004511C5 /* RMDImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageViewController.m; sourceTree = "<group>"; };
 		CCB2C8B21D0231F0000F6BB1 /* RMDImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDImageStore.h; sourceTree = "<group>"; };
 		CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageStore.m; sourceTree = "<group>"; };
 		CCC299421D0DD4E70042D0F0 /* RMDItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItemCell.h; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */,
 				CC26BC611CF54104004A06CF /* RMDItemsTableViewController.h */,
 				CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */,
+				CC75C6A41D102BC9004511C5 /* RMDImageViewController.h */,
+				CC75C6A51D102BC9004511C5 /* RMDImageViewController.m */,
 				CCC299421D0DD4E70042D0F0 /* RMDItemCell.h */,
 				CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */,
 				CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */,
@@ -308,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC75C6A61D102BC9004511C5 /* RMDImageViewController.m in Sources */,
 				CC26BC631CF54104004A06CF /* RMDItemsTableViewController.m in Sources */,
 				CC26BC661CF7ECAC004A06CF /* RMDItem.m in Sources */,
 				CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */,

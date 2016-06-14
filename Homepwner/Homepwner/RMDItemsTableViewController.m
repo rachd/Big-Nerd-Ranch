@@ -11,8 +11,12 @@
 #import "RMDItemStore.h"
 #import "RMDItem.h"
 #import "RMDItemCell.h"
+#import "RMDImageStore.h"
+#import "RMDImageViewController.h"
 
-@interface RMDItemsTableViewController ()
+@interface RMDItemsTableViewController () <UIPopoverControllerDelegate>
+
+@property (nonatomic, strong) UIPopoverController *imagePopover;
 
 @end
 
@@ -94,10 +98,29 @@
     cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     cell.thumbnailView.image = item.thumbnail;
     [cell.textLabel setFont:[UIFont systemFontOfSize:20]];
+    __weak RMDItemCell *weakCell = cell;
     cell.actionBlock = ^{
-        NSLog(@"Going to show image");
+        RMDItemCell *strongCell = weakCell;
+        if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+            NSString *itemKey = item.itemKey;
+            UIImage *img = [[RMDImageStore sharedStore] imageForKey:itemKey];
+            if (!img) {
+                return;
+            }
+            CGRect rect = [self.view convertRect:strongCell.thumbnailView.bounds fromView:strongCell.thumbnailView];
+            RMDImageViewController *ivc = [[RMDImageViewController alloc] init];
+            ivc.image = img;
+            self.imagePopover = [[UIPopoverController alloc] initWithContentViewController:ivc];
+            self.imagePopover.delegate = self;
+            self.imagePopover.popoverContentSize = CGSizeMake(600, 600);
+            [self.imagePopover presentPopoverFromRect:rect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
     };
     return cell;
+}
+
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController {
+    self.imagePopover = nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

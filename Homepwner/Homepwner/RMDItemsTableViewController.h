@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMDItemsTableViewController : UITableViewController
+@interface RMDItemsTableViewController : UITableViewController <UIViewControllerRestoration>
 
 @end

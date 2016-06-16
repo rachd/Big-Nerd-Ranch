@@ -22,11 +22,18 @@
 
 @implementation RMDItemsTableViewController
 
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
+    return [[self alloc] initWithStyle:UITableViewStylePlain];
+}
+
 - (instancetype)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
         UINavigationItem *navItem = self.navigationItem;
         navItem.title = @"Homepwner";
+        
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
         
         UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
         navItem.rightBarButtonItem = addButton;
@@ -44,6 +51,7 @@
     };
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
+    navController.restorationIdentifier = NSStringFromClass([navController class]);
     [self presentViewController:navController animated:YES completion:NULL];
 }
 

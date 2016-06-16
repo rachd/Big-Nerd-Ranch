@@ -34,9 +34,20 @@
 
 @implementation RMDDetailViewController
 
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
+    BOOL isNew = NO;
+    if ([identifierComponents count] == 3) {
+        isNew = YES;
+    }
+    
+    return [[self alloc] initForNewItem:isNew];
+}
+
 -(instancetype)initForNewItem:(BOOL)isNew {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
         if (isNew) {
             UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                       target:self

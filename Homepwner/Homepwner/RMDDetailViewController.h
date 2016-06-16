@@ -10,7 +10,7 @@
 
 @class RMDItem;
 
-@interface RMDDetailViewController : UIViewController
+@interface RMDDetailViewController : UIViewController <UIViewControllerRestoration>
 
 @property (nonatomic, strong) RMDItem *item;
 @property (nonatomic, copy) void (^dismissBlock)(void);

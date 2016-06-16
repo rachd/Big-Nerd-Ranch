@@ -24,6 +24,7 @@
 		CCBBFA061D12455500DB527D /* RMDImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA051D12455500DB527D /* RMDImageTransformer.m */; };
 		CCBBFA0B1D124AEA00DB527D /* RMDItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA081D124AEA00DB527D /* RMDItem+CoreDataProperties.m */; };
 		CCBBFA0C1D124AEA00DB527D /* RMDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA0A1D124AEA00DB527D /* RMDItem.m */; };
+		CCBBFA0F1D12551300DB527D /* RMDAssetTypeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA0E1D12551300DB527D /* RMDAssetTypeTableViewController.m */; };
 		CCC299441D0DD4E70042D0F0 /* RMDItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */; };
 		CCC299461D0DD53C0042D0F0 /* RMDItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */; };
 		CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */; };
@@ -79,6 +80,8 @@
 		CCBBFA081D124AEA00DB527D /* RMDItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMDItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		CCBBFA091D124AEA00DB527D /* RMDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItem.h; sourceTree = "<group>"; };
 		CCBBFA0A1D124AEA00DB527D /* RMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItem.m; sourceTree = "<group>"; };
+		CCBBFA0D1D12551300DB527D /* RMDAssetTypeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDAssetTypeTableViewController.h; sourceTree = "<group>"; };
+		CCBBFA0E1D12551300DB527D /* RMDAssetTypeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDAssetTypeTableViewController.m; sourceTree = "<group>"; };
 		CCC299421D0DD4E70042D0F0 /* RMDItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItemCell.h; sourceTree = "<group>"; };
 		CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItemCell.m; sourceTree = "<group>"; };
 		CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDItemCell.xib; sourceTree = "<group>"; };
@@ -159,6 +162,8 @@
 				CCBBFA081D124AEA00DB527D /* RMDItem+CoreDataProperties.m */,
 				CCBBFA091D124AEA00DB527D /* RMDItem.h */,
 				CCBBFA0A1D124AEA00DB527D /* RMDItem.m */,
+				CCBBFA0D1D12551300DB527D /* RMDAssetTypeTableViewController.h */,
+				CCBBFA0E1D12551300DB527D /* RMDAssetTypeTableViewController.m */,
 				CC26BC341CF54034004A06CF /* Main.storyboard */,
 				CC26BC371CF54034004A06CF /* Assets.xcassets */,
 				CC26BC391CF54034004A06CF /* LaunchScreen.storyboard */,
@@ -332,6 +337,7 @@
 				CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */,
 				CCBBFA0C1D124AEA00DB527D /* RMDItem.m in Sources */,
 				CC26BC301CF54034004A06CF /* AppDelegate.m in Sources */,
+				CCBBFA0F1D12551300DB527D /* RMDAssetTypeTableViewController.m in Sources */,
 				CCBBFA031D1242FE00DB527D /* Homepwner.xcdatamodeld in Sources */,
 				CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */,
 				CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */,

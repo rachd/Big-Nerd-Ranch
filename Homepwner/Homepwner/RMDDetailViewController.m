@@ -11,6 +11,7 @@
 #import "RMDItemStore.h"
 #import "RMDImageStore.h"
 #import "RMDDatePickerViewController.h"
+#import "RMDAssetTypeTableViewController.h"
 
 @interface RMDDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIPopoverControllerDelegate>
 
@@ -27,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *assetTypeButton;
 
 @end
 
@@ -82,6 +84,12 @@
     NSString *itemKey = self.item.itemKey;
     UIImage *imageToDisplay = [[RMDImageStore sharedStore] imageForKey:itemKey];
     self.imageView.image = imageToDisplay;
+    
+    NSString *typeLabel = [self.item.assetType valueForKey:@"label"];
+    if (!typeLabel) {
+        typeLabel = @"None";
+    }
+    self.assetTypeButton.title = [NSString stringWithFormat:@"Type: %@", typeLabel];
     
     [self updateFonts];
 }
@@ -226,6 +234,13 @@
     self.nameField.font = font;
     self.serialNumberField.font = font;
     self.valueField.font = font;
+}
+
+- (IBAction)showAssetTypePicker:(id)sender {
+    [self.view endEditing:YES];
+    RMDAssetTypeTableViewController *avc = [[RMDAssetTypeTableViewController alloc] init];
+    avc.item = self.item;
+    [self.navigationController pushViewController:avc animated:YES];
 }
 
 @end

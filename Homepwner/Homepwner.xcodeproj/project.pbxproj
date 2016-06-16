@@ -15,12 +15,15 @@
 		CC26BC461CF54034004A06CF /* HomepwnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC451CF54034004A06CF /* HomepwnerTests.m */; };
 		CC26BC511CF54034004A06CF /* HomepwnerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC501CF54034004A06CF /* HomepwnerUITests.m */; };
 		CC26BC631CF54104004A06CF /* RMDItemsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */; };
-		CC26BC661CF7ECAC004A06CF /* RMDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC651CF7ECAC004A06CF /* RMDItem.m */; };
 		CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BC681CF7ED16004A06CF /* RMDItemStore.m */; };
 		CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */; };
 		CC26BD001CFC9D8A004A06CF /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */; };
 		CC75C6A61D102BC9004511C5 /* RMDImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75C6A51D102BC9004511C5 /* RMDImageViewController.m */; };
 		CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */; };
+		CCBBFA031D1242FE00DB527D /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA011D1242FE00DB527D /* Homepwner.xcdatamodeld */; };
+		CCBBFA061D12455500DB527D /* RMDImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA051D12455500DB527D /* RMDImageTransformer.m */; };
+		CCBBFA0B1D124AEA00DB527D /* RMDItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA081D124AEA00DB527D /* RMDItem+CoreDataProperties.m */; };
+		CCBBFA0C1D124AEA00DB527D /* RMDItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CCBBFA0A1D124AEA00DB527D /* RMDItem.m */; };
 		CCC299441D0DD4E70042D0F0 /* RMDItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */; };
 		CCC299461D0DD53C0042D0F0 /* RMDItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */; };
 		CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */; };
@@ -60,8 +63,6 @@
 		CC26BC521CF54034004A06CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC26BC611CF54104004A06CF /* RMDItemsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItemsTableViewController.h; sourceTree = "<group>"; };
 		CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItemsTableViewController.m; sourceTree = "<group>"; };
-		CC26BC641CF7ECAC004A06CF /* RMDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDItem.h; path = ../../RandomItems/RandomItems/RMDItem.h; sourceTree = "<group>"; };
-		CC26BC651CF7ECAC004A06CF /* RMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDItem.m; path = ../../RandomItems/RandomItems/RMDItem.m; sourceTree = "<group>"; };
 		CC26BC671CF7ED16004A06CF /* RMDItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItemStore.h; sourceTree = "<group>"; };
 		CC26BC681CF7ED16004A06CF /* RMDItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItemStore.m; sourceTree = "<group>"; };
 		CC26BCFC1CFC9D8A004A06CF /* RMDDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDDetailViewController.h; sourceTree = "<group>"; };
@@ -71,6 +72,13 @@
 		CC75C6A51D102BC9004511C5 /* RMDImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageViewController.m; sourceTree = "<group>"; };
 		CCB2C8B21D0231F0000F6BB1 /* RMDImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDImageStore.h; sourceTree = "<group>"; };
 		CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageStore.m; sourceTree = "<group>"; };
+		CCBBFA021D1242FE00DB527D /* Homepwner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwner.xcdatamodel; sourceTree = "<group>"; };
+		CCBBFA041D12455500DB527D /* RMDImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDImageTransformer.h; sourceTree = "<group>"; };
+		CCBBFA051D12455500DB527D /* RMDImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDImageTransformer.m; sourceTree = "<group>"; };
+		CCBBFA071D124AEA00DB527D /* RMDItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RMDItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CCBBFA081D124AEA00DB527D /* RMDItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RMDItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CCBBFA091D124AEA00DB527D /* RMDItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItem.h; sourceTree = "<group>"; };
+		CCBBFA0A1D124AEA00DB527D /* RMDItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItem.m; sourceTree = "<group>"; };
 		CCC299421D0DD4E70042D0F0 /* RMDItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDItemCell.h; sourceTree = "<group>"; };
 		CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDItemCell.m; sourceTree = "<group>"; };
 		CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RMDItemCell.xib; sourceTree = "<group>"; };
@@ -106,6 +114,7 @@
 		CC26BC1F1CF54034004A06CF = {
 			isa = PBXGroup;
 			children = (
+				CCBBFA011D1242FE00DB527D /* Homepwner.xcdatamodeld */,
 				CC26BC2A1CF54034004A06CF /* Homepwner */,
 				CC26BC441CF54034004A06CF /* HomepwnerTests */,
 				CC26BC4F1CF54034004A06CF /* HomepwnerUITests */,
@@ -131,8 +140,6 @@
 				CC26BCFC1CFC9D8A004A06CF /* RMDDetailViewController.h */,
 				CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */,
 				CC26BCFE1CFC9D8A004A06CF /* RMDDetailViewController.xib */,
-				CC26BC641CF7ECAC004A06CF /* RMDItem.h */,
-				CC26BC651CF7ECAC004A06CF /* RMDItem.m */,
 				CCE8D6881D0658CD00393A4C /* RMDDatePickerViewController.h */,
 				CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */,
 				CC26BC671CF7ED16004A06CF /* RMDItemStore.h */,
@@ -146,6 +153,12 @@
 				CCC299421D0DD4E70042D0F0 /* RMDItemCell.h */,
 				CCC299431D0DD4E70042D0F0 /* RMDItemCell.m */,
 				CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */,
+				CCBBFA041D12455500DB527D /* RMDImageTransformer.h */,
+				CCBBFA051D12455500DB527D /* RMDImageTransformer.m */,
+				CCBBFA071D124AEA00DB527D /* RMDItem+CoreDataProperties.h */,
+				CCBBFA081D124AEA00DB527D /* RMDItem+CoreDataProperties.m */,
+				CCBBFA091D124AEA00DB527D /* RMDItem.h */,
+				CCBBFA0A1D124AEA00DB527D /* RMDItem.m */,
 				CC26BC341CF54034004A06CF /* Main.storyboard */,
 				CC26BC371CF54034004A06CF /* Assets.xcassets */,
 				CC26BC391CF54034004A06CF /* LaunchScreen.storyboard */,
@@ -314,12 +327,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC75C6A61D102BC9004511C5 /* RMDImageViewController.m in Sources */,
+				CCBBFA061D12455500DB527D /* RMDImageTransformer.m in Sources */,
 				CC26BC631CF54104004A06CF /* RMDItemsTableViewController.m in Sources */,
-				CC26BC661CF7ECAC004A06CF /* RMDItem.m in Sources */,
 				CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */,
+				CCBBFA0C1D124AEA00DB527D /* RMDItem.m in Sources */,
 				CC26BC301CF54034004A06CF /* AppDelegate.m in Sources */,
+				CCBBFA031D1242FE00DB527D /* Homepwner.xcdatamodeld in Sources */,
 				CC26BC691CF7ED16004A06CF /* RMDItemStore.m in Sources */,
 				CCB2C8B41D0231F0000F6BB1 /* RMDImageStore.m in Sources */,
+				CCBBFA0B1D124AEA00DB527D /* RMDItem+CoreDataProperties.m in Sources */,
 				CCC299441D0DD4E70042D0F0 /* RMDItemCell.m in Sources */,
 				CC26BC2D1CF54034004A06CF /* main.m in Sources */,
 				CC26BCFF1CFC9D8A004A06CF /* RMDDetailViewController.m in Sources */,
@@ -569,6 +585,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCBBFA011D1242FE00DB527D /* Homepwner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCBBFA021D1242FE00DB527D /* Homepwner.xcdatamodel */,
+			);
+			currentVersion = CCBBFA021D1242FE00DB527D /* Homepwner.xcdatamodel */;
+			path = Homepwner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CC26BC201CF54034004A06CF /* Project object */;
 }

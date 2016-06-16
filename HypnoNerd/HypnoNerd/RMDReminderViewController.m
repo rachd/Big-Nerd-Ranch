@@ -23,6 +23,8 @@
         self.tabBarItem.title = @"Reminder";
         UIImage *image = [UIImage imageNamed:@"Time.png"];
         self.tabBarItem.image = image;
+        self.restorationIdentifier = NSStringFromClass([self class]);
+        self.restorationClass = [self class];
     }
     return self;
 }

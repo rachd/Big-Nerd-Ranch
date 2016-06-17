@@ -38,7 +38,6 @@
                         <rect key="frame" x="8" y="2" width="40" height="40"/>
                         <connections>
                             <action selector="showImage:" destination="GxD-5T-znD" eventType="touchUpInside" id="qmb-sB-Ini"/>
-                            <action selector="shwoImage:" destination="GxD-5T-znD" eventType="touchUpInside" id="KHB-Mo-w6N"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TzK-IH-7WK">

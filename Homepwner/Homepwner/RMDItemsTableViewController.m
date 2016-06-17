@@ -26,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         UINavigationItem *navItem = self.navigationItem;
-        navItem.title = @"Homepwner";
+        navItem.title = NSLocalizedString(@"Homepwner", @"Name of application");
         
         UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
         navItem.rightBarButtonItem = addButton;

@@ -24,6 +24,7 @@
 		CCC299461D0DD53C0042D0F0 /* RMDItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC299451D0DD53C0042D0F0 /* RMDItemCell.xib */; };
 		CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */; };
 		CCEC739F1D137FAB00517E49 /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCEC73A11D137FAB00517E49 /* RMDDetailViewController.xib */; };
+		CCEC73A91D138AF000517E49 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCEC73AB1D138AF000517E49 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,8 @@
 		CCEC73A41D13807C00517E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/RMDDetailViewController.xib; sourceTree = "<group>"; };
 		CCEC73A51D1380B500517E49 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/RMDDetailViewController.strings; sourceTree = "<group>"; };
 		CCEC73A61D1380CB00517E49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RMDDetailViewController.strings; sourceTree = "<group>"; };
+		CCEC73AA1D138AF000517E49 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CCEC73AC1D138AF900517E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,7 @@
 				CCB2C8B31D0231F0000F6BB1 /* RMDImageStore.m */,
 				CC26BC611CF54104004A06CF /* RMDItemsTableViewController.h */,
 				CC26BC621CF54104004A06CF /* RMDItemsTableViewController.m */,
+				CCEC73AB1D138AF000517E49 /* Localizable.strings */,
 				CC75C6A41D102BC9004511C5 /* RMDImageViewController.h */,
 				CC75C6A51D102BC9004511C5 /* RMDImageViewController.m */,
 				CCC299421D0DD4E70042D0F0 /* RMDItemCell.h */,
@@ -288,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC26BC3B1CF54034004A06CF /* LaunchScreen.storyboard in Resources */,
+				CCEC73A91D138AF000517E49 /* Localizable.strings in Resources */,
 				CCC299461D0DD53C0042D0F0 /* RMDItemCell.xib in Resources */,
 				CCEC739F1D137FAB00517E49 /* RMDDetailViewController.xib in Resources */,
 				CC26BC381CF54034004A06CF /* Assets.xcassets in Resources */,
@@ -385,6 +390,15 @@
 				CCEC73A61D1380CB00517E49 /* en */,
 			);
 			name = RMDDetailViewController.xib;
+			sourceTree = "<group>";
+		};
+		CCEC73AB1D138AF000517E49 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCEC73AA1D138AF000517E49 /* es */,
+				CCEC73AC1D138AF900517E49 /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

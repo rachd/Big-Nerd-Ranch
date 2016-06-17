@@ -15,6 +15,10 @@
 
 @implementation RMDHypnosisViewController
 
++ (UIViewController *)viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
+    return [[self alloc] init];
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMDReminderViewController : UIViewController
+@interface RMDReminderViewController : UIViewController <UIViewControllerRestoration>
 
 @end

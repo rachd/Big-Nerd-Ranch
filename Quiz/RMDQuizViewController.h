@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMDQuizViewController : UIViewController
+@interface RMDQuizViewController : UIViewController <UIViewControllerRestoration>
 
 @end

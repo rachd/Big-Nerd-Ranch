@@ -25,21 +25,37 @@
     return YES;
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]){
         [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
     }
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    return YES;
+}
+
+- (UIViewController *)application:(UIApplication *)application viewControllerWithRestorationIdentifierPath:(NSArray *)identifierComponents coder:(NSCoder *)coder {
+    UITabBarController *vc = [[UITabBarController alloc] init];
+    vc.restorationIdentifier = [identifierComponents lastObject];
     RMDHypnosisViewController *hvc = [[RMDHypnosisViewController alloc] init];
     RMDReminderViewController *rvc = [[RMDReminderViewController alloc] init];
     RMDQuizViewController *qvc = [[RMDQuizViewController alloc] init];
-    
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[hvc, rvc, qvc];
-    tabBarController.restorationIdentifier = NSStringFromClass([tabBarController class]);
-    self.window.rootViewController = tabBarController;
-    
-    self.window.backgroundColor = [UIColor whiteColor];
+    vc.viewControllers = @[hvc, rvc, qvc];
+    self.window.rootViewController = vc;
+    return vc;
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    if (!self.window.rootViewController) {
+        RMDHypnosisViewController *hvc = [[RMDHypnosisViewController alloc] init];
+        RMDReminderViewController *rvc = [[RMDReminderViewController alloc] init];
+        RMDQuizViewController *qvc = [[RMDQuizViewController alloc] init];
+        
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        tabBarController.viewControllers = @[hvc, rvc, qvc];
+        tabBarController.restorationIdentifier = NSStringFromClass([tabBarController class]);
+        self.window.rootViewController = tabBarController;
+    }
     [self.window makeKeyAndVisible];
     // Override point for customization after application launch.
     return YES;

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMDHypnosisViewController : UIViewController
+@interface RMDHypnosisViewController : UIViewController <UIViewControllerRestoration>
 
 @end

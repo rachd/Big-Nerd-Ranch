@@ -10,12 +10,21 @@
 #import "RMDItemsTableViewController.h"
 #import "RMDItemStore.h"
 
+NSString * const RMDNextItemValuePrefsKey = @"NextItemValue";
+NSString * const RMDNextItemNamePrefsKey = @"NextItemName";
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
++ (void)initialize {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *factorySettings = @{RMDNextItemValuePrefsKey : @75,
+                                      RMDNextItemNamePrefsKey : @"Coffee Cup"};
+    [defaults registerDefaults:factorySettings];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 

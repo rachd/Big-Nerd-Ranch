@@ -9,6 +9,7 @@
 #import "RMDItemStore.h"
 #import "RMDItem.h"
 #import "RMDImageStore.h"
+#import "AppDelegate.h"
 
 @interface RMDItemStore ()
 
@@ -58,6 +59,9 @@
     } else {
         [self.cheapItems addObject:item];
     }
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    item.valueInDollars = [defaults integerForKey:RMDNextItemValuePrefsKey];
+    item.itemName = [defaults objectForKey:RMDNextItemNamePrefsKey];
     return item;
 }
 

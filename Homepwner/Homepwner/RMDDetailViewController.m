@@ -11,6 +11,7 @@
 #import "RMDItemStore.h"
 #import "RMDImageStore.h"
 #import "RMDDatePickerViewController.h"
+#import "AppDelegate.h"
 
 @interface RMDDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIPopoverControllerDelegate>
 
@@ -123,7 +124,11 @@
     RMDItem *item = self.item;
     item.itemName = self.nameField.text;
     item.serialNumber = self.serialNumberField.text;
-    item.valueInDollars = [self.valueField.text intValue];
+    int newValue = [self.valueField.text intValue];
+    if (newValue != item.valueInDollars) {
+        item.valueInDollars = newValue;
+        [[NSUserDefaults standardUserDefaults] setInteger:newValue forKey:RMDNextItemValuePrefsKey];
+    }
 }
 - (IBAction)changeDate:(UIButton *)sender {
     RMDDatePickerViewController *dateVC = [[RMDDatePickerViewController alloc] initWithItem:self.item];

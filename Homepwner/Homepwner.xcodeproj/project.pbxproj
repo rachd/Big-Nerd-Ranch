@@ -25,6 +25,7 @@
 		CCE8D68A1D0658CD00393A4C /* RMDDatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE8D6891D0658CD00393A4C /* RMDDatePickerViewController.m */; };
 		CCEC739F1D137FAB00517E49 /* RMDDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCEC73A11D137FAB00517E49 /* RMDDetailViewController.xib */; };
 		CCEC73A91D138AF000517E49 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCEC73AB1D138AF000517E49 /* Localizable.strings */; };
+		CCEC73AE1D13942F00517E49 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CCEC73AD1D13942F00517E49 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		CCEC73A61D1380CB00517E49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/RMDDetailViewController.strings; sourceTree = "<group>"; };
 		CCEC73AA1D138AF000517E49 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		CCEC73AC1D138AF900517E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		CCEC73AD1D13942F00517E49 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				CC26BC2F1CF54034004A06CF /* AppDelegate.m */,
 				CC26BCFC1CFC9D8A004A06CF /* RMDDetailViewController.h */,
 				CC26BCFD1CFC9D8A004A06CF /* RMDDetailViewController.m */,
+				CCEC73AD1D13942F00517E49 /* Settings.bundle */,
 				CCEC73A11D137FAB00517E49 /* RMDDetailViewController.xib */,
 				CC26BC641CF7ECAC004A06CF /* RMDItem.h */,
 				CC26BC651CF7ECAC004A06CF /* RMDItem.m */,
@@ -297,6 +300,7 @@
 				CCEC739F1D137FAB00517E49 /* RMDDetailViewController.xib in Resources */,
 				CC26BC381CF54034004A06CF /* Assets.xcassets in Resources */,
 				CC26BC361CF54034004A06CF /* Main.storyboard in Resources */,
+				CCEC73AE1D13942F00517E49 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

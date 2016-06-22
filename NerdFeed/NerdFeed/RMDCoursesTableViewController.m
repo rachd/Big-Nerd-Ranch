@@ -11,6 +11,7 @@
 @interface RMDCoursesTableViewController ()
 
 @property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, copy) NSArray *courses;
 
 @end
 
@@ -35,8 +36,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request
                                                      completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-                                                         NSString *json = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                                                         NSLog(@"%@", json);
+                                                         NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                                                         self.courses = jsonObject[@"courses"];
                                                      }];
     [dataTask resume];
 }
@@ -44,11 +45,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,22 +56,23 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return [self.courses count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *course = self.courses[indexPath.row];
+    cell.textLabel.text = course[@"title"];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

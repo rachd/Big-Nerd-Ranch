@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC542B591D1A36D7007BE0BC /* RMDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC542B581D1A36D7007BE0BC /* RMDWebViewController.m */; };
 		CCA88B381D14FF94003E0CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA88B371D14FF94003E0CFE /* main.m */; };
 		CCA88B3B1D14FF94003E0CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCA88B3A1D14FF94003E0CFE /* AppDelegate.m */; };
 		CCA88B431D14FF94003E0CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCA88B421D14FF94003E0CFE /* Assets.xcassets */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CC542B571D1A36D7007BE0BC /* RMDWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDWebViewController.h; sourceTree = "<group>"; };
+		CC542B581D1A36D7007BE0BC /* RMDWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDWebViewController.m; sourceTree = "<group>"; };
 		CCA88B331D14FF94003E0CFE /* NerdFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NerdFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA88B371D14FF94003E0CFE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CCA88B391D14FF94003E0CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				CCA88B3A1D14FF94003E0CFE /* AppDelegate.m */,
 				CCA88B691D14FFCA003E0CFE /* RMDCoursesTableViewController.h */,
 				CCA88B6A1D14FFCA003E0CFE /* RMDCoursesTableViewController.m */,
+				CC542B571D1A36D7007BE0BC /* RMDWebViewController.h */,
+				CC542B581D1A36D7007BE0BC /* RMDWebViewController.m */,
 				CCA88B421D14FF94003E0CFE /* Assets.xcassets */,
 				CCA88B441D14FF94003E0CFE /* LaunchScreen.storyboard */,
 				CCA88B471D14FF94003E0CFE /* Info.plist */,
@@ -267,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCA88B6B1D14FFCA003E0CFE /* RMDCoursesTableViewController.m in Sources */,
+				CC542B591D1A36D7007BE0BC /* RMDWebViewController.m in Sources */,
 				CCA88B3B1D14FF94003E0CFE /* AppDelegate.m in Sources */,
 				CCA88B381D14FF94003E0CFE /* main.m in Sources */,
 			);
@@ -486,6 +492,7 @@
 				CCA88B621D14FF94003E0CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCA88B631D14FF94003E0CFE /* Build configuration list for PBXNativeTarget "NerdFeedTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +501,7 @@
 				CCA88B651D14FF94003E0CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCA88B661D14FF94003E0CFE /* Build configuration list for PBXNativeTarget "NerdFeedUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +510,7 @@
 				CCA88B681D14FF94003E0CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

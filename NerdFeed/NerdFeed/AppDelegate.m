@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RMDCoursesTableViewController.h"
+#import "RMDWebViewController.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,8 @@
     
     RMDCoursesTableViewController *cvc = [[RMDCoursesTableViewController alloc] init];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:cvc];
+    RMDWebViewController *wvc = [[RMDWebViewController alloc] init];
+    cvc.webViewController = wvc;
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     return YES;
